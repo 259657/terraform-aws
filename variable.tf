@@ -15,11 +15,7 @@ variable "create_sns_topic" {
   default     = false
 }
 
-# variable "sns_topic_arn" {
-#   type        = string
-#   default     = "arn:aws:sns:us-east-1:931252131472:SNS" 
-#   description = "ARN istniejącego tematu SNS"
-# }
+
 variable "sns_topic_arn" {
   type    = string
   default = "arn:aws:sns:us-east-1:931252131472:SNS" 
@@ -28,4 +24,10 @@ variable "sns_topic_arn" {
 variable "error_sns_topic_arn" {
   type    = string
   default = ""
+}
+
+variable "db_password" {
+  description = "Hasło do bazy danych"
+  type        = string
+  sensitive   = true
 }

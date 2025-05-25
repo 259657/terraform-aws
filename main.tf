@@ -20,6 +20,22 @@ module "sensor_lambda" {
   sns_topic_arn = var.sns_topic_arn
 }
 
+module "secrets_lambda_test" {
+  source            = "./modules/lambda_secrets_test"
+  function_name     = "secrets_test_lambda"
+  lambda_role_arn   = data.aws_iam_role.main_role.arn
+  lambda_timeout    = 10
+}
+
+resource "aws_ssm_parameter" "db_password" {
+  name        = "/spp-db/password"
+  description = "Hasło do bazy spp-db"
+  type        = "SecureString"
+  value       = var.db_password
+  overwrite   = true
+}
+
+
 
 
 # # provider "aws" {
