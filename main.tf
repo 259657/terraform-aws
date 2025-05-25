@@ -36,7 +36,7 @@ resource "aws_ssm_parameter" "db_password" {
 }
 
 
-
+# aws lambda invoke --function-name iot_sensor_processor --cli-binary-format raw-in-base64-out --payload file://event.json output.json
 
 # # provider "aws" {
 # #   region = "us-east-1"
