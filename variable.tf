@@ -22,7 +22,7 @@ variable "create_sns_topic" {
 # }
 variable "sns_topic_arn" {
   type    = string
-  default = ""
+  default = "arn:aws:sns:us-east-1:931252131472:SNS" 
 }
 
 variable "error_sns_topic_arn" {

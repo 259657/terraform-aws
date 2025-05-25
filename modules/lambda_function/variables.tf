@@ -32,6 +32,6 @@ variable "log_retention_days" {
 }
 
 variable "sns_topic_arn" {
-  type    = string
-  default = ""
+  type = string
+  description = "ARN tematu SNS"
 }
