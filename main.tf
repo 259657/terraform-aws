@@ -42,7 +42,7 @@ resource "aws_ssm_parameter" "db_password" {
 # #   region = "us-east-1"
 # #   # shared_credentials_files = [ "~/.aws/credentials" ]
 # #   # profile = "default"
-
+#
 # # }
 # provider "aws" {
 #   region = var.aws_region
